@@ -1,0 +1,54 @@
+<nav>
+    <ul>
+        <li> <a href="/">Logo</a></li>
+        <li> <a href="/speakers">Speakers</a></li>
+        <li> <a href="/program">Program</a></li>
+        <li> 
+            <box class="getTicket">
+            <a href="/program">Get tickets</a></li>
+        </box>
+    </ul>
+</nav>
+
+<style>
+   nav{
+    display: flex;
+    border: 1px solid rgb(21, 21, 57);
+    margin: 1rem;
+
+   } 
+
+   nav ul {
+    list-style: none;
+
+   }
+
+   nav li{
+    display: inline-block; /* på linje */
+    justify-content: space-evenly;
+    margin: 1rem;
+    
+   }
+
+   nav a{
+    text-decoration: none;
+    font-family: Mulish;
+    color:rgb(0, 0, 0);
+   }
+
+   .getTicket{
+    background-color: #3C8A9E;
+    padding: 1.2rem;
+    border-radius: 5rem;
+   }
+
+   .getTicket a{
+    color: white;
+   }
+
+   .getTicket:hover {
+    transform: scale(1.1);
+   }
+
+   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Mulish&display=swap');
+</style>
