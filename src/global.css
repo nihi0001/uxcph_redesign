@@ -2,3 +2,22 @@
     /*hele sitet kan maks ses i 1450px*/
     max-width: 1450px;
 }
+
+h1, h2, h3, p{
+    color: #3B4F6C;    
+}
+
+h3{
+    font-weight: 500;
+    font-style: italic;
+}
+
+p{
+    line-height: 1.5;
+    max-width: 40rem;
+}
+
+a{
+    text-decoration: none;
+
+}

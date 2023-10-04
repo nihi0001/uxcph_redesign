@@ -1,29 +1,40 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Cards from "../components/Cards.astro";
+
+const data = await fetch(
+  "https://sqqqyffuhusqdvjkshxf.supabase.co/rest/v1/ux_speakers",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNxcXF5ZmZ1aHVzcWR2amtzaHhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzMzY4MDcsImV4cCI6MjAxMTkxMjgwN30.-K3pBEiuVw9Mv5jbVumfGHI6bYW6POCXvQuTh_bDzMM",
+    },
+  }
+).then((res) => res.json());
 ---
 
 <Layout>
   <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
-  <p>speakers</p>
-  <a href="singleview">hejhej</a>
-  <!--test -->
 
-  <div class="gridSpeakers">
-    <template id="speakersTemplate">
-      <article class="speakers">
-        <img src="" alt="portrait" />
-        <h2 class="name">Mansi Gupta</h2>
-      </article>
-    </template>
-  </div>
+  <section class="speakers">
+    {
+      data.map((speaker) => {
+        return <Cards data={speaker} />;
+      })
+    }
+  </section>
+
   <!-- slot slut -->
 </Layout>
 
-<script src="../js/list.js"></script>
-
 <style>
-    .gridSpeakers{
+  .speakers {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
-    }
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5rem;
+    margin: 2rem;
+    font-family: Mulish;
+  }
+
 </style>
