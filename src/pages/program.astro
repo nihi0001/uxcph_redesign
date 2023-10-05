@@ -3,7 +3,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
     <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
-    <h1 class="baggrund">Schedule for 2024</h1>
+    
+    <div class="baggrund">
+        <h1>Schedule for 2024</h1>
+        <img src="/src/images/forside illustration.svg" alt="forside-illustration">
+    </div>
+    
 
     <div class="box_1">
         <p>9:30-9:40</p>
@@ -60,7 +65,14 @@ import Layout from "../layouts/Layout.astro";
         background-image: url(../images/Rectangle_schedule.svg);
         height: 480px;
         width: 1440px;
+        
     }
+    
+    .image {
+        height: 454px;
+        width: 377px;
+    }
+
     .box_1 {
     height: 268px;
     width: 1440px;
@@ -74,4 +86,13 @@ import Layout from "../layouts/Layout.astro";
     top: 0;
     width: 1440px;
     }
+
+    .h1{
+        font-family: ;
+    }
+
+    .p{
+
+    } 
+
 </style>
