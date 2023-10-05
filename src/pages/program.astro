@@ -3,7 +3,75 @@ import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
     <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
-    <p>program</p>
+    <h1 class="baggrund">Schedule for 2024</h1>
+
+    <div class="box_1">
+        <p>9:30-9:40</p>
+        <p>Welcome by Helle Martens</p>
+    </div>
+    
+    <div class="box_2">
+        <p>9:40–10:10</p>
+        <p>Ethical Design by Mansi Gupta
+            A talk about Ethical Design, and the many ways it can be incorporated into the work process.
+        </p>
+    </div>
+    
+    <div class="box_3">
+        <p>10:10–10:40</p>
+        <p>A Systems Thinking Approach to Designer Ethics by Laura Yarrow
+            What is Systems Thinking, and how can we use this approach to understand the impact we have as designers on society and the world.
+        </p>
+    </div>
+   
+    <div class="box_4">
+        <p>10:40–12:00</p> 
+        <p>The Cynic’s Guide to Designing For Social Good by Rebecca Rae-Evans
+            This talk is all about what not to do when designing for social good. What works, what doesn’t work, and what makes Rebecca scream into a pillow with rage at the end of the working day.
+        </p>
+    </div>
+
+    <div class="box_5">
+        <p>12:00–13:00</p> 
+        <p>Lunch break</p>
+    </div>
+    
+
+    <div class="box_6">
+        <p>13:00–17:00</p>
+
+        <p>Discussing Influence and Designing For Good by Don Norman
+            We invite you to join us for an interactive discussion about the theme, Influence and Designing For Good, with Don Norman
+        </p>
+    
+    </div>
+
+    
+
+
 
     <!-- slot slut -->
 </Layout>
+
+
+
+<style>
+    .baggrund{
+        background-image: url(../images/Rectangle_schedule.svg);
+        height: 480px;
+        width: 1440px;
+    }
+    .box_1 {
+    height: 268px;
+    width: 1440px;
+    }
+
+    .box_1 .rectangle {
+    background-color: #0091ad1a;
+    height: 268px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 1440px;
+    }
+</style>
