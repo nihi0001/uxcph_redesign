@@ -7,7 +7,7 @@
     </p>
     <p class="p3">You will get an e-mail with your verification!</p>
     <label class="form"> E-mail <input type="email" name="email" /></label>
-    <button class="submit">Submit</button>
+    <div><button class="submit">Submit</button></div>
   </div>
 </article>
 
@@ -20,7 +20,9 @@
 
   .container {
     padding: 10rem; /* så der er mere baggrund med */
-    /*margin-left: 10rem;*/
+    /*margin-left: 20rem; har brugt denne hvis text align ikke har virket */ 
+    text-align: center;
+
   }
 
   .p1,
@@ -29,14 +31,20 @@
   .form,
   .submit {
     color: white;
+
+  }
+
+  .p1{
+    text-shadow: 2px 4px 4px #0091AD;
   }
 
   .submit {
-    padding: 1.2rem;
-    border: 1px solid rgb(255, 255, 255);
+    padding: 1.1rem;
+    border: 2px solid rgb(255, 255, 255);
     background-color: #0091AD;
     border-radius: 1rem;
     margin-top: 1rem;
+    font-size: medium;
 
   }
   .submit:hover {
