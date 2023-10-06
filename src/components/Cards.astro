@@ -4,7 +4,7 @@ const { data } = Astro.props;
 
 <a href={`speakers/${data.slug}`}>
   <article>
-    <p>{data.image}</p>
+    <img src=`images/${data.image}` alt={data.slug}>
     <h2>{data.name}</h2>
     <h3>{data.jobposition}</h3>
 
