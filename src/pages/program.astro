@@ -4,53 +4,65 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
     <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
     
-    <div class="baggrund">
-        <h1>Schedule for 2024</h1>
-        <img src="/src/images/forside illustration.svg" alt="forside-illustration">
-    </div>
-
-    
-
-    <div class="box_1">
-        <p>9:30-9:40</p>
-        <p>Welcome by Helle Martens</p>
-    </div>
-    
-    <div class="box_2">
-        <p>9:40–10:10</p>
-        <p>Ethical Design by Mansi Gupta
-            A talk about Ethical Design, and the many ways it can be incorporated into the work process.
-        </p>
-    </div>
-    
-    <div class="box_3">
-        <p>10:10–10:40</p>
-        <p>A Systems Thinking Approach to Designer Ethics by Laura Yarrow
-            What is Systems Thinking, and how can we use this approach to understand the impact we have as designers on society and the world.
-        </p>
-    </div>
-   
-    <div class="box_4">
-        <p>10:40–12:00</p> 
-        <p>The Cynic’s Guide to Designing For Social Good by Rebecca Rae-Evans
-            This talk is all about what not to do when designing for social good. What works, what doesn’t work, and what makes Rebecca scream into a pillow with rage at the end of the working day.
-        </p>
-    </div>
-
-    <div class="box_5">
-        <p>12:00–13:00</p> 
-        <p>Lunch break</p>
+    <div class="overskrift">
+        <h1>Schedule for 2024</h1> 
     </div>
     
 
-    <div class="box_6">
-        <p>13:00–17:00</p>
-
-        <p>Discussing Influence and Designing For Good by Don Norman
-            We invite you to join us for an interactive discussion about the theme, Influence and Designing For Good, with Don Norman
-        </p>
-    
+    <div class="billede">
+        <img src="/src/images/landing_foto.webp" alt="forside-billede">
     </div>
+    
+
+
+    <div class="container">
+        <div class="tid_1">
+            <p>9:30-9:40</p>
+        </div>
+        <div class="tid_2">
+            <p>9:40–10:10</p>
+        </div>
+        <div class="tid_3">
+            <p>10:10–10:40</p>
+        </div>
+        <div class="tid_4">
+            <p>10:40–12:00</p> 
+        </div>
+        <div class="tid_5">
+            <p>12:00–13:00</p> 
+        </div>
+        <div class="tid_6">
+            <p>13:00–17:00</p>
+        </div>
+        <div class="tekst_1">
+            <p>Welcome by Helle Martens</p>
+        </div>
+        <div class="tekst_2">
+            <p>Ethical Design by Mansi Gupta
+                A talk about Ethical Design, and the many ways it can be incorporated into the work process.
+            </p>
+        </div>
+        <div class="tekst_3">
+            <p>A Systems Thinking Approach to Designer Ethics by Laura Yarrow
+                What is Systems Thinking, and how can we use this approach to understand the impact we have as designers on society and the world.
+            </p>
+        </div>
+        <div class="tekst_4">
+            <p>The Cynic’s Guide to Designing For Social Good by Rebecca Rae-Evans
+                This talk is all about what not to do when designing for social good. What works, what doesn’t work, and what makes Rebecca scream into a pillow with rage at the end of the working day.
+            </p>
+        </div>
+        <div class="tekst_5">
+            <p>Lunch break</p>
+        </div>
+        <div class="tekst_6">
+            <p>Discussing Influence and Designing For Good by Don Norman
+                We invite you to join us for an interactive discussion about the theme, Influence and Designing For Good, with Don Norman
+            </p>
+        </div>
+    </div>
+
+
 
     
 
@@ -62,37 +74,78 @@ import Layout from "../layouts/Layout.astro";
 
 
 <style>
-    .baggrund{
-        background-image: url(../images/Rectangle_schedule.svg);
-        height: 480px;
-        width: 1440px;
-        font-family: Montserrat;
+  
+    .overskift {
+        color: #000000;
+        font-family: "Mulish-Regular", Helvetica;
+        font-size: 25px;
+        font-weight: 400;
+        justify-content: center;
+        margin: 10rem;
+        padding: auto;
     }
-    
+
 
     .image {
         height: 454px;
         width: 377px;
+        justify-content: flex-end;
     }
 
-    .box_1 {
-    height: 268px;
-    width: 1440px;
+    .container {  
+        display: grid;
+        grid-template-columns: 0.7fr 1.3fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "tid_1 tekst_1"
+        "tid_2 tekst_2"
+        "tid_3 tekst_3"
+        "tid_4 tekst_4"
+        "tid_5 tekst_5"
+        "tid_6 tekst_6"
+        "tid_7 tekst_7";
+        left: 0rem;
+        top: 0rem;
+        justify-content: center;
+        background: rgba(0, 145, 173, 0.10);;
+        margin: 10rem;
     }
 
-    .box_1 .rectangle {
-    background-color: #0091ad1a;
-    height: 268px;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 1440px;
+    .tid_1 { 
+        grid-area: tid_1;
+        justify-content: center;
     }
+
+    .tid_2 { grid-area: tid_2; }
+
+    .tid_3 { grid-area: tid_3; }
+
+    .tid_4 { grid-area: tid_4; }
+
+    .tid_5 { grid-area: tid_5; }
+
+    .tid_6 { grid-area: tid_6; }
+
+    .tid_7 { grid-area: tid_7; }
+
+    .tekst_1 { grid-area: tekst_1; }
+
+    .tekst_2 { grid-area: tekst_2; }
+
+    .tekst_3 { grid-area: tekst_3; }
+
+    .tekst_4 { grid-area: tekst_4; }
+
+    .tekst_5 { grid-area: tekst_5; }
+
+    .tekst_6 { grid-area: tekst_6; }
+
+    .tekst_7 { grid-area: tekst_7; }
+
 
    
 
-    .p{
-
-    } 
 
 </style>
