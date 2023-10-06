@@ -16,13 +16,13 @@
     background-image: url(../images/Rectangle_nyhedsbrev.svg);
     font-family: Mulish;
     margin: -1rem; /* minus så det fylder hele siden */
+    line-height: 10rem; /* space imellem hvert element */
   }
 
   .container {
-    padding: 10rem; /* så der er mere baggrund med */
+    padding: 2rem; /* så der er mere baggrund med. juster på denne hvis et "nyt billede" begynder */
     /*margin-left: 20rem; har brugt denne hvis text align ikke har virket */ 
     text-align: center;
-
   }
 
   .p1,
@@ -31,19 +31,19 @@
   .form,
   .submit {
     color: white;
-
   }
 
   .p1{
     text-shadow: 2px 4px 4px #0091AD;
   }
-
+.p1,.p2,.p3 {
+    max-width:100%;
+}
   .submit {
     padding: 1.1rem;
     border: 2px solid rgb(255, 255, 255);
     background-color: #0091AD;
     border-radius: 1rem;
-    margin-top: 1rem;
     font-size: medium;
 
   }
