@@ -46,16 +46,23 @@ id: 1,
     <p>{myData.about}</p>
     <p>{myData.contact}</p>
     <!--<p>{myData.image}</p>-->
-    <img src=`images/${myData.image}` alt={myData.slug}>
+    <img
+      class="portraitImage"
+      src=`../public/imagesVol2/${myData.image}`
+      alt={myData.slug}
+    />
   </article>
 </Layout>
 
 <style>
-  .single{
+  .single {
     margin: 2rem;
-    font-family: Mulish; 
+    font-family: Mulish;
     margin-top: 5rem;
     margin-bottom: 5rem;
+  }
 
-    }
+  .portraitImage {
+    width: 15rem;
+  }
 </style>

@@ -3,10 +3,31 @@ const { data } = Astro.props;
 ---
 
 <a href={`speakers/${data.slug}`}>
-  <article>
-    <img src=`images/${data.image}` alt={data.slug}>
-    <h2>{data.name}</h2>
-    <h3>{data.jobposition}</h3>
-
-  </article>
+  <div class="gridSpeakers">
+    <section class="grid-item">
+      <img
+        class="cardImage"
+        src={`public/imagesVol2/${data.image}`}
+        alt={data.slug}
+      />
+      <h2>{data.name}</h2>
+      <h3>{data.jobposition}</h3>
+    </section>
+  </div>
 </a>
+
+<style>
+  .gridSpeakers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem;
+    font-family: Mulish;
+  }
+  .grid-item {
+    /*text-align: center;*/
+  }
+  .cardImage {
+    width: 15rem;
+  }
+</style>
