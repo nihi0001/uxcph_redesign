@@ -21,7 +21,7 @@
 
   .container {
     padding: 2rem; /* så der er mere baggrund med. juster på denne hvis et "nyt billede" begynder */
-    /*margin-left: 20rem; har brugt denne hvis text align ikke har virket */ 
+    /*margin-left: 20rem; har brugt denne hvis text align ikke har virket */
     text-align: center;
   }
 
@@ -33,19 +33,20 @@
     color: white;
   }
 
-  .p1{
-    text-shadow: 2px 4px 4px #0091AD;
+  .p1 {
+    text-shadow: 2px 4px 4px #0091ad;
   }
-.p1,.p2,.p3 {
-    max-width:100%;
-}
+  .p1,
+  .p2,
+  .p3 {
+    max-width: 100%; /* Overskriver max-widtg 40% i global */
+  }
   .submit {
     padding: 1.1rem;
     border: 2px solid rgb(255, 255, 255);
-    background-color: #0091AD;
+    background-color: #0091ad;
     border-radius: 1rem;
     font-size: medium;
-
   }
   .submit:hover {
     transform: scale(1.1);
