@@ -41,28 +41,49 @@ id: 1,
 
 <Layout>
   <article class="single">
-    <h2>{myData.name}</h2>
-    <h3>{myData.jobposition}</h3>
-    <p>{myData.about}</p>
-    <p>{myData.contact}</p>
+    <section class="col1">
+      <img
+        class="portraitImage"
+        src=`../public/imagesVol2/${myData.image}`
+        alt={myData.slug}
+      />
+    </section>
+    <section class="col2">
+      <h2>Speaker</h2>
+      <h2 class="name">{myData.name}</h2>
+      <h3 class="jobposition">{myData.jobposition}</h3>
+      <p class="about">{myData.about}</p>
+      <p class="contact">{myData.contact}</p>
+    </section>
     <!--<p>{myData.image}</p>-->
-    <img
-      class="portraitImage"
-      src=`../public/imagesVol2/${myData.image}`
-      alt={myData.slug}
-    />
   </article>
 </Layout>
 
 <style>
   .single {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 2rem;
     font-family: Mulish;
     margin-top: 5rem;
     margin-bottom: 5rem;
   }
 
+
+.name, .jobposition, .about, .contact{
+  line-height: 2;
+  margin-top: 1rem;
+  margin-left: 0rem;
+}
+
+.name{
+  font-size: 2rem;
+}
+
+.about{
+  max-width: 85%;
+}
   .portraitImage {
-    width: 15rem;
+    width: 20rem;
   }
 </style>
