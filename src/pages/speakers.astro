@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Cards from "../components/Cards.astro";
+import SpeakersTop from "../components/SpeakersTop.astro";
+
 
 const data = await fetch(
   "https://sqqqyffuhusqdvjkshxf.supabase.co/rest/v1/ux_speakers",
@@ -16,6 +18,7 @@ const data = await fetch(
 
 <Layout>
   <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
+  <SpeakersTop/>
 
   <section class="speakers">
     {
