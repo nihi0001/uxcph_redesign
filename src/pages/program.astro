@@ -12,8 +12,10 @@ import Layout from "../layouts/Layout.astro";
             UX professionals of different backgrounds and specialitied.
         </p>
     </div>
-    
-    
+
+    <div class="billede">
+        
+    </div>
     
     <button class="knap">
         <p>March 21 - Day 2</p>
@@ -23,6 +25,7 @@ import Layout from "../layouts/Layout.astro";
     <button class="knap_2">
         <p>March 20 - Day 1</p>
     </button>
+
 
     <div class="container">
         <div class="tid_1">
@@ -90,10 +93,9 @@ import Layout from "../layouts/Layout.astro";
         font-weight: 400;
         display: flex;
         width: 1000px;
-        height: 220px;
         flex-shrink: 0;
         margin-top: 150px;
-        margin-bottom: 0px;
+        margin-bottom: 50px;
         margin-right: 100px;
         margin-left: 50px;
         padding-top: 5rem;
@@ -133,7 +135,7 @@ import Layout from "../layouts/Layout.astro";
         margin-bottom: -500px;
         margin-right: 150px;
         margin-left: 300px;
-        text-align:end;
+        text-align: end;
     }
 
     .knap_2{
@@ -149,11 +151,18 @@ import Layout from "../layouts/Layout.astro";
         color: white;
     }
 
+    .knapper{
+        display: block;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+
+    }
+
     .container {  
         display: grid;
         grid-template-columns: 0.7fr 1.3fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 0px 0px;
+        gap: 25px 0px;
         grid-auto-flow: row;
         grid-template-areas:
         "tid_1 tekst_1"
@@ -165,13 +174,12 @@ import Layout from "../layouts/Layout.astro";
         "tid_7 tekst_7";
         left: 0rem;
         top: 0rem;
-        text-align: center;
+        text-align: start;
         justify-content:space-around;
         border-style:solid;
         flex-shrink: 0;
         border-color:#0091AD;
         border-radius: 5px;
-        text-align: center;
         margin-top: 150px;
         margin-bottom: 150px;
         margin-right: 100px;
@@ -217,7 +225,9 @@ import Layout from "../layouts/Layout.astro";
     .tekst_7 { grid-area: tekst_7; }
 
 
-   
 
+    .billede{
+        background-image: url(../public/imagesVol2/landing_foto.webp);
+    }
 
 </style>
