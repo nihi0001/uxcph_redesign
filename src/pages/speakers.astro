@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Cards from "../components/Cards.astro";
 import SpeakersTop from "../components/SpeakersTop.astro";
-
+import Tickets from "../components/Tickets.astro";
 
 const data = await fetch(
   "https://sqqqyffuhusqdvjkshxf.supabase.co/rest/v1/ux_speakers",
@@ -18,7 +18,7 @@ const data = await fetch(
 
 <Layout>
   <!-- alt det her er det der bliver til <slot /> i Layout.astro -->
-  <SpeakersTop/>
+  <SpeakersTop />
 
   <section class="speakers">
     {
@@ -28,12 +28,12 @@ const data = await fetch(
     }
   </section>
 
+  <Tickets />
+
   <!-- slot slut -->
 </Layout>
 
 <style>
-
-  
   .speakers {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -41,6 +41,4 @@ const data = await fetch(
     margin: 7rem;
     font-family: Mulish;
   }
-  
-
 </style>
