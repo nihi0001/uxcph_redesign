@@ -2,13 +2,13 @@
   <ul>
     <li>
       <a class="logo" href="/">
-        <img src="imagesVol2/logoUx.png" alt="Logo" />
+        <img src="/imagesVol2/logoUx.png" alt="Logo" />
       </a>
     </li>
     <li><a href="/speakers">Speakers</a></li>
     <li><a href="/program">Program</a></li>
     <li>
-      <div class="getTicket"><a href="/tickets">Get tickets</a></div>
+        <a class="getTicket" href="/tickets">Get tickets</a>
     </li>
   </ul>
 </nav>
@@ -18,7 +18,7 @@
     display: flex;
     /*border: 1px solid rgb(21, 21, 57);*/
     margin: 1rem;
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
   }
 
   nav ul {
@@ -30,33 +30,40 @@
     justify-content: space-evenly;
     margin: 2rem;
   }
-
   nav a {
     text-decoration: none;
     font-family: Mulish;
-    color: rgb(0, 0, 0);
+    color: #3B4F6C;
   }
-
-  .getTicket {
+  nav a.getTicket {
     background-color: #3c8a9e;
     padding: 1.2rem;
     border-radius: 5rem;
+    color: white;
+    /*margin-right: -25rem;*/
   }
 
-  .getTicket a {
+  /*.getTicket a {
     color: white;
   }
+  */
+
+  /*
 
   .getTicket:hover {
     transform: scale(1.1);
   }
+*/
 
+/*
   nav li:hover {
     transform: scale(1.1);
   }
 
-  .logo img{
+  */
+  .logo img {
     width: 200px;
     margin-bottom: -1rem;
+    /*margin-left: -27rem; /* placering i venstre side */
   }
 </style>

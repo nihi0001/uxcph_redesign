@@ -2,13 +2,13 @@
 
 <article class="grid">
     <section>
-        <img class="pic1" src="imagesVol2/ticketforone_1.png" alt="">
+        <img class="TicketImg" src="imagesVol2/ticketforone_1.png" alt="">
     </section>
     <section>
-        <img class="pic2" src="imagesVol2/onlineticket_2.png" alt="">
+        <img class="TicketImg" src="imagesVol2/onlineticket_2.png" alt="">
     </section>
     <section>
-        <img class="pic3" src="imagesVol2/onlinegroupticket_3.png" alt="">
+        <img class="TicketImg" src="imagesVol2/onlinegroupticket_3.png" alt="">
     </section>
 </article>
 
@@ -23,8 +23,6 @@
         font-weight: 700;
         margin-top: 5rem;
         font-size: 2rem;
-
-
     }
     .grid{
         display: grid;
@@ -32,23 +30,13 @@
         margin: 11rem;
         margin-top: 8rem;
     }
-
-    .pic1, .pic2, .pic3{
+    .TicketImg{
         width: 18rem;
     }
-
-    .pic1:hover{
-        transform: scale(1.1);
+    .TicketImg:hover{
+        transform: scale(1.05);
+        transition: 2s;
     }
-
-    .pic2:hover{
-        transform: scale(1.1);
-    }
-
-    .pic3:hover{
-        transform: scale(1.1);
-    }
-
     .ptag{
         max-width: 70%;
         text-align: center;
