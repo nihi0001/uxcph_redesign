@@ -49,7 +49,6 @@ id: 1,
       />
     </section>
     <section class="col2">
-      <h2>Speaker</h2>
       <h2 class="name">{myData.name}</h2>
       <h3 class="jobposition">{myData.jobposition}</h3>
       <p class="about">{myData.about}</p>
@@ -69,21 +68,30 @@ id: 1,
     margin-bottom: 5rem;
   }
 
+  .jobposition{
+    margin-top: -3rem;
+    color: rgb(121, 121, 121);
+    font-size: large;
+  }
+
+
 
 .name, .jobposition, .about, .contact{
-  line-height: 2;
-  margin-top: 1rem;
+  line-height: 1.7;
+  /*margin-top: 1rem;*/
   margin-left: 0rem;
 }
 
 .name{
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .about{
-  max-width: 85%;
+  margin-top: 3rem;
+  max-width: 80%;
 }
   .portraitImage {
-    width: 20rem;
+    width: 25rem;
+    margin-left: 8rem;
   }
 </style>
