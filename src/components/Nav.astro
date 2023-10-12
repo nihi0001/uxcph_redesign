@@ -5,9 +5,9 @@
         <img src="/imagesVol2/logoUx.png" alt="Logo" />
       </a>
     </li>
-    <li><a href="/speakers">Speakers</a></li>
-    <li><a href="/program">Program</a></li>
-    <li>
+    <li class="middle"><a href="/speakers">Speakers</a></li>
+    <li class="middle"><a href="/program">Program</a></li>
+    <li class="itemTicket">
         <a class="getTicket" href="/tickets">Get tickets</a>
     </li>
   </ul>
@@ -16,6 +16,8 @@
 <style>
   nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     /*border: 1px solid rgb(21, 21, 57);*/
     margin: 1rem;
     /*justify-content: flex-end;*/
@@ -27,7 +29,7 @@
 
   nav li {
     display: inline-block; /* på linje */
-    justify-content: space-evenly;
+    /*justify-content: space-evenly;*/
     margin: 2rem;
   }
   nav a {
@@ -40,9 +42,18 @@
     padding: 1.2rem;
     border-radius: 5rem;
     color: white;
-    /*margin-right: -25rem;*/
   }
 
+  /*.itemTicket{
+    margin-left: 30rem;
+    max-width: 1400px;
+  }
+  */
+
+  /*.middle{
+    margin-left: 12rem;
+  }
+*/
   /*.getTicket a {
     color: white;
   }
