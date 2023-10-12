@@ -1,48 +1,74 @@
 <h1>Tickets for UX Copenhagen 2024</h1>
 
 <article class="grid">
-    <section>
-        <img class="TicketImg" src="/imagesVol2/ticketforone_1.png" alt="">
-    </section>
-    <section>
-        <img class="TicketImg" src="/imagesVol2/onlineticket_2.png" alt="">
-    </section>
-    <section>
-        <img class="TicketImg" src="/imagesVol2/onlinegroupticket_3.png" alt="">
-    </section>
+  <section>
+    <img class="TicketImg" src="/imagesVol2/ticketforone_1.png" alt="" />
+  </section>
+  <section>
+    <img class="TicketImg" src="/imagesVol2/onlineticket_2.png" alt="" />
+  </section>
+  <section>
+    <img class="TicketImg" src="/imagesVol2/onlinegroupticket_3.png" alt="" />
+  </section>
 </article>
 
-<p class="ptag">All tickets include main stage stream, and recordings from all stages 1 week after the event for 6 months.</p>
-
+<p class="ptag">
+  *All tickets include main stage stream, and recordings from all stages 1 week
+  after the event for 6 months.
+</p>
 
 <style>
+  h1 {
+    font-family: montserrat;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 11rem;
+    margin-top: 8rem;
+  }
+  .TicketImg {
+    width: 18rem;
+  }
+  .TicketImg:hover {
+    transform: scale(1.05);
+    transition: 2s;
+  }
+  .ptag {
+    /*max-width: 70%;*/
+    text-align: center;
+    font-family: mulish;
+    margin-top: -8rem;
+    color: #686f79;
+  }
 
-    h1{
-        font-family: montserrat;
-        text-align: center;
-        font-weight: 700;
-        margin-top: 5rem;
-        font-size: 2rem;
+  @media (max-width: 500px) {
+    h1 {
+      text-align: left;
+      margin-top: 4rem;
+      margin-left: 4rem;
+      font-size: 30px;
     }
-    .grid{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        margin: 11rem;
-        margin-top: 8rem;
+    .TicketImg {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-left: -10.5rem;
+      margin-top: -6rem;
+      padding: 3.5rem;
     }
-    .TicketImg{
-        width: 18rem;
-    }
-    .TicketImg:hover{
-        transform: scale(1.05);
-        transition: 2s;
-    }
+
     .ptag{
-        /*max-width: 70%;*/
-        text-align: center;
-        font-family: mulish;
-        margin-top: -8rem;
-        color: #686f79
+     max-width: 70%;
+     text-align: left;
+     margin-left: 4rem;
+     margin-top: -12rem;
+     font-size: 13px;
 
-    }
+
+}
+  }
 </style>
