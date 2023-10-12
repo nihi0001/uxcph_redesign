@@ -1,3 +1,21 @@
+<header class="nav">
+  <a class="logo" href="/">
+    <img src="/imagesVol2/logoUx.png" alt="logo" />
+  </a>
+
+  <nav class="main-menu">
+    <button class="toggle-btn">MENU</button>
+    <ul>
+      <li><a href="/speakers">Speakers</a></li>
+      <li><a href="/program">Program</a></li>
+      <li class="itemTicket">
+        <a class="getTicket" href="/tickets">Get tickets</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!--
 <nav>
   <ul>
     <li>
@@ -14,32 +32,43 @@
     </li>
   </ul>
 </nav>
+ -->
 
 <style>
-  nav {
+  /*
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(21, 21, 57);
+    margin: 1rem;
+    justify-content: flex-end;
+  }
+  */
+
+  .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     /*border: 1px solid rgb(21, 21, 57);*/
     margin: 1rem;
-    /*justify-content: flex-end;*/
+    justify-content: flex-end;
   }
-
-  nav ul {
+  .nav ul {
     list-style: none;
   }
 
-  nav li {
+  .nav li {
     display: inline-block; /* på linje */
     /*justify-content: space-evenly;*/
     margin: 2rem;
   }
-  nav a {
+  .nav a {
     text-decoration: none;
     font-family: Mulish;
     color: #3b4f6c;
   }
-  nav a.getTicket {
+  .nav a.getTicket {
     background-color: #0091ad;
     padding: 1rem;
     border-radius: 1rem;
@@ -61,21 +90,18 @@
   }
   */
 
-
-/*
+  /*
   .getTicket:hover {
     transform: scale(1.1);
     transition: 1s;
   }
 */
 
-  
-  nav li:hover {
+  .nav li:hover {
     transform: scale(1.05);
     transition: 1s;
   }
 
-  
   .logo img {
     width: 200px;
     margin-bottom: -1rem;
@@ -102,22 +128,98 @@
   color:  #9c6286;
 } */
 
+  .toggle-btn {
+    font-family: montserrat;
+    color: #3b4f6c;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    margin: 3rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: none;
+  }
+
   @media (max-width: 480px) {
-    nav li {
+    .toggle-btn {
       display: block;
-      margin: 1rem;
-      line-height: 2.5;
     }
 
-    nav a.getTicket {
-    padding: 1rem;
-    margin-left: 0rem;
-    border-radius: 1rem;
+    .main-menu.shown {
+      display: contents;
+      }
 
+    .main-menu ul {
+      display: none;
+
+    }
+
+    .main-menu.shown ul {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      display: flex;
+      flex-flow: row;
+      flex-flow: column;
+      flex-basis: 100%;
+      background-color: #e4fafe;
+    }
+
+    .logo img {
+      width: 250px;
+      margin-top: 1rem;
+      margin-left: 2rem;
+      /*margin-left: -27rem; /* placering i venstre side */
+    }
+
+    .nav {
+      display: list-item;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    .nav li {
+      display: block;
+      margin: 1rem;
+      line-height: 2;
+      margin-top: 1rem;
+    }
+
+    .nav a.getTicket {
+      padding: 1rem;
+      margin-left: 0rem;
+      border-radius: 1rem;
+    }
   }
-}
-
-  
 </style>
 
+<script>
+  // Burger menu
 
+  // Lav variablen "btn", der henviser til ".toggle-btn"
+  const btn = document.querySelector(".toggle-btn");
+  // Lav variablen "menu", der henviser til ".main-menu"
+  const menu = document.querySelector(".main-menu");
+
+  // Lav funktionen "toggleMenu()" med følgende funktionalitet
+  function toggleMenu() {
+    // a) toggle klassen "shown" på menu vha. classList.toggle
+    menu.classList.toggle("shown");
+
+    // b) lav variablen "menuShown", som siger, at menu-variablen indeholder klassen "shown" via classList.contains("")
+    const menuShown = menu.classList.contains("shown");
+
+    // c) spørg om "menuShown" i if-sætningen nedenfor (=> if (menuShown)), og udskift teksten
+    if (menuShown) {
+      console.log(menuShown); // se i konsollen
+      // sæt btn.textContent til "Luk", hvis menuShown er "true"
+      btn.textContent = "Luk";
+    } else {
+      console.log(menuShown); // se i konsollen
+      // sæt btn.textContent til "Menu", hvis menuShown er "false"
+      btn.textContent = "Menu";
+    }
+  }
+
+  // Tilføj et klik-event til "btn", der sætter toggleMenu-funktionen i gang
+  btn.addEventListener("click", toggleMenu);
+</script>
