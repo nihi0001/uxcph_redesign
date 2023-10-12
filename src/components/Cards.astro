@@ -34,7 +34,23 @@ const { data } = Astro.props;
   h3{
     margin-top: -1.5rem;
     color: #797979;
-    
-
   }
+
+  @media (max-width: 480px) {
+    .gridSpeakers{
+      margin-left: -1rem;
+      margin-top: -3rem;
+      padding: 1rem;
+
+    }
+    h2{
+      font-size: 23px;
+    }
+    h3{
+      font-size: 15px;
+    }
+
+   
+  }
+
 </style>

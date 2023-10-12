@@ -10,7 +10,7 @@
     </li>
     <li><a href="/program">Program</a></li>
     <li class="itemTicket">
-        <a class="getTicket" href="/tickets">Get tickets</a>
+      <a class="getTicket" href="/tickets">Get tickets</a>
     </li>
   </ul>
 </nav>
@@ -37,11 +37,11 @@
   nav a {
     text-decoration: none;
     font-family: Mulish;
-    color: #3B4F6C;
+    color: #3b4f6c;
   }
   nav a.getTicket {
     background-color: #3c8a9e;
-    padding: 1.2rem;
+    padding: 1rem;
     border-radius: 5rem;
     color: white;
   }
@@ -68,7 +68,7 @@
   }
 */
 
-/*
+  /*
   nav li:hover {
     transform: scale(1.1);
   }
@@ -80,23 +80,36 @@
     /*margin-left: -27rem; /* placering i venstre side */
   }
 
-   /* unvisited link */
-a:link {
-  color: #3B4F6C;
-}
+  /* unvisited link */
+  a:link {
+    color: #3b4f6c;
+  }
 
-/* visited link */
-a:visited {
-  color: #3B4F6C;
-}
+  /* visited link */
+  a:visited {
+    color: #3b4f6c;
+  }
 
-/* mouse over link */
-a:hover {
-  color: #6399b7;
-}
+  /* mouse over link */
+  a:hover {
+    color: #6399b7;
+  }
 
-/* selected link */
-/*a:active {
+  /* selected link */
+  /*a:active {
   color:  #9c6286;
 } */
+
+  @media (max-width: 480px) {
+    nav li {
+      display: block;
+      margin: 1rem;
+      line-height: 2.5;
+    }
+
+    nav a.getTicket {
+    padding: 0.8rem;
+    margin-left: 0rem;
+  }
+  }
 </style>
