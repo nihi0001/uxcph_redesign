@@ -4,7 +4,10 @@
     Choose to attend only for the conference, or join the day before for a day
     of learning in smaller groups.
   </p>
-  <a class="TicketButton" href="/tickets">Get Ticket</a>
+
+  <div class="boxLink">
+    <a class="TicketButton" href="/tickets">Get Ticket</a>
+  </div>
 </article>
 
 <style>
@@ -16,7 +19,6 @@
     margin-top: 10rem;
   }
 
-
   .TicketButton {
     padding: 1.1rem;
     border: 2px solid #ffffff;
@@ -27,33 +29,30 @@
     color: rgb(255, 255, 255);
   }
 
-  .TicketButton:hover {
-    transform: scale(1.1);
+  .boxLink:hover {
+    transform: scale(1.05);
+    transition: 1s;
   }
 
-
   @media (max-width: 480px) {
-    .TicketArticle{
+    .TicketArticle {
       margin-top: -1rem;
-
     }
-    h2{
+    h2 {
       text-align: left;
       margin-left: 5rem;
     }
 
-    p{
+    p {
       text-align: left;
       margin-left: 5rem;
-      max-width: 70%; 
+      max-width: 70%;
       font-size: 15px;
-
     }
 
-    .TicketButton{
+    .TicketButton {
       margin-left: -13rem;
       padding: 1rem;
     }
-   
   }
 </style>

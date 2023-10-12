@@ -50,9 +50,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*border: 1px solid rgb(21, 21, 57);*/
     margin: 1rem;
-    justify-content: flex-end;
+    justify-content: center;
   }
   .nav ul {
     list-style: none;
@@ -75,27 +74,10 @@
     color: white;
   }
 
-  /*.itemTicket{
-    margin-left: 30rem;
-    max-width: 1400px;
-  }
-  */
-
-  /*.middle{
-    margin-left: 12rem;
-  }
-*/
-  /*.getTicket a {
-    color: white;
-  }
-  */
-
-  /*
   .getTicket:hover {
     transform: scale(1.1);
     transition: 1s;
   }
-*/
 
   .nav li:hover {
     transform: scale(1.05);
@@ -104,8 +86,7 @@
 
   .logo img {
     width: 200px;
-    margin-bottom: -1rem;
-    /*margin-left: -27rem; /* placering i venstre side */
+    margin-top: 0.5rem;
   }
 
   /* unvisited link */
@@ -122,12 +103,6 @@
   a:hover {
     color: #6399b7;
   }
-
-  /* selected link */
-  /*a:active {
-  color:  #9c6286;
-} */
-
   .toggle-btn {
     font-family: montserrat;
     color: #3b4f6c;
@@ -139,7 +114,6 @@
     cursor: pointer;
     display: none;
   }
-
   @media (max-width: 480px) {
     .toggle-btn {
       display: block;
@@ -168,7 +142,6 @@
       width: 250px;
       margin-top: 1rem;
       margin-left: 2rem;
-      /*margin-left: -27rem; /* placering i venstre side */
     }
 
     .nav {
@@ -212,11 +185,11 @@
     if (menuShown) {
       console.log(menuShown); // se i konsollen
       // sæt btn.textContent til "Luk", hvis menuShown er "true"
-      btn.textContent = "Luk";
+      btn.textContent = "LUK";
     } else {
       console.log(menuShown); // se i konsollen
       // sæt btn.textContent til "Menu", hvis menuShown er "false"
-      btn.textContent = "Menu";
+      btn.textContent = "MENU";
     }
   }
 
