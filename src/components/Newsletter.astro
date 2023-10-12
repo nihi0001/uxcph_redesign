@@ -48,11 +48,40 @@
     background-color: #fbfbfb;
     color: #0091ad;
     border-radius: 1rem;
-    font-size: medium; 
-   }
-
-
+    font-size: medium;
+  }
   .submit:hover {
     transform: scale(1.1);
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 3rem; /* så der er mere baggrund med. juster på denne hvis et "nyt billede" begynder */
+      /*margin-left: 20rem; har brugt denne hvis text align ikke har virket */
+      text-align: left;
+    }
+    .p1 {
+      text-align: left;
+      margin-left: 2rem;
+      font-size: 20px;
+      margin-top: 6rem;
+    }
+
+    .p2,
+    .p3 {
+      margin-left: 2rem;
+      font-size: 15px;
+    }
+
+    .form {
+      margin-left: 2rem;
+      font-size: 15px;
+    }
+
+    .submit {
+      font-size: 15px;
+      margin-left: 2rem;
+      padding: 0.8rem;
+    }
   }
 </style>
